@@ -1,0 +1,16 @@
+var profession = ["cat", "dog", "pig", "duck"];
+var a = {
+    "cat": [1, 2, 3, "12", 4, 22, 11],
+    // "pig": [2, 3, "12",11],
+    // "dog": [2, 4, 3, "12", 11],
+    // "duck": [2,3, 11]
+};
+var jiaoji = a.cat;
+var re = profession.reduce(function (pre, cur, index, array) {
+    jiaoji = jiaoji.filter(function (n) {
+        return a[cur].indexOf(n) != -1;
+    });
+    return jiaoji;
+
+});
+console.log(jiaoji);//2
